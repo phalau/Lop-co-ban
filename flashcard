@@ -1,0 +1,30 @@
+class baitap3:
+    def __init__(self):
+
+        self.transport = {'xe đạp': 'byke',
+                        'xe hơi': 'car',
+                        'xe máy': 'scooter',
+                        'mô tô': 'xe máy phân khối lớn',
+                        'xe tải': 'camion',
+                        'tầu hoả': 'train',
+                        'máy bay': 'plane'}
+    def timtu(self):
+        while True:
+
+            vietnamese, english = random.choice(list(self.transport.items()))
+
+            print("Tiếng Anh của '{}' là: ".format(vietnamese))
+            user_answer = input()
+
+            if user_answer.lower() == english:
+                print("Đúng")
+            else:
+                print("Sai")
+
+            option = int(input("Nhập 0 để tiếp tục : "))
+            if option:
+                break
+    print("Kết thúc")
+fc = baitap3()
+fc.timtu()
+    
